@@ -3,22 +3,23 @@ Given(/^there are two posts$/) do
 end
 
 When(/^I visit home page$/) do
-  pending # express the regexp above with the code you wish you had
+  visit '/'
 end
 
 Then(/^I see a list of posts$/) do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content 'Post 1'
+  page.should have_content 'Post 2'
 end
 
 Given(/^I'm in home page$/) do
-  pending # express the regexp above with the code you wish you had
+  visit '/'
 end
 
 When(/^I select a post$/) do
-  pending # express the regexp above with the code you wish you had
+  click_on 'Post 1'
 end
 
 Then(/^I can read the entire post$/) do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content 'Body Text'
 end
 
