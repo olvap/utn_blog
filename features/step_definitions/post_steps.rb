@@ -16,7 +16,7 @@ Given(/^I'm in home page$/) do
 end
 
 When(/^I select a post$/) do
-  click_on 'Post 1'
+  click_on Post.first.title
 end
 
 Then(/^I can read the entire post$/) do
