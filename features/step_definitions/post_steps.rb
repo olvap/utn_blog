@@ -44,5 +44,5 @@ When(/^I submit an empty title$/) do
 end
 
 Then(/^I should see an error message$/) do
-  page.should have_content 'there is an error'
+  page.should have_content "can't be blank"
 end
