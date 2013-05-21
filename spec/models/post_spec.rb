@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe Post do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it 'validates title presence' do
+    @post = Post.new
+    @post.should_not be_valid
+    @post.title = 'A good title'
+    @post.should be_valid
+  end
+
 end
