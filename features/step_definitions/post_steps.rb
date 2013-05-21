@@ -24,13 +24,13 @@ Then(/^I can read the entire post$/) do
 end
 
 When(/^I click on 'new post'$/) do
-  click_on 'new post'
+  click_on 'Write a post'
 end
 
 When(/^I write a new post$/) do
-  fill_in 'new_post_title', with: 'Amazing post'
-  fill_in 'new_post_body', with: 'Interesting things to say'
-  click_on 'submit'
+  fill_in 'post_title', with: 'Amazing post'
+  fill_in 'post_body', with: 'Interesting things to say'
+  click_on 'Create Post'
 end
 
 Then(/^I should see my post$/) do
@@ -39,8 +39,8 @@ Then(/^I should see my post$/) do
 end
 
 When(/^I submit an empty title$/) do
-  fill_in 'new_post_body', with: 'Interesting things to say'
-  click_on 'submit'
+  fill_in 'post_body', with: 'Interesting things to say'
+  click_on 'Create Post'
 end
 
 Then(/^I should see an error message$/) do

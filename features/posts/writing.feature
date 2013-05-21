@@ -7,10 +7,12 @@ Feature: Writting posts
     Given I'm in home page
     When I click on 'new post'
 
+    @wip
   Scenario: Write a post
     When I write a new post
     Then I should see my post
 
+    @wip
   Scenario: Write a post without title
     When I submit an empty title
     Then I should see an error message
